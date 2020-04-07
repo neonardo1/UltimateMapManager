@@ -1728,18 +1728,15 @@ namespace PRoConEvents {
             {
                 this.m_iNextMapIndex = nextIndex;
             }
-            if (this.m_blCheckPlayerCount)
-            {
-                this.m_blCheckPlayerCount = false;
-                if (this.m_blRoundEnded && !this.m_blRestartRequested)
-                {
-                    this.ExecuteCommand("procon.protected.tasks.add", "CUltimateMapManager", "50", "1", "1", "procon.protected.plugins.call", "CUltimateMapManager", "CheckPlayerCount");
-                }
-                else
-                {
-                    CheckPlayerCount();
-                }
-            }
+	if (this.m_blRoundEnded && !this.m_blRestartRequested)
+	{
+	    this.ExecuteCommand("procon.protected.tasks.add", "CUltimateMapManager", "50", "1", "1", "procon.protected.plugins.call", "CUltimateMapManager", "CheckPlayerCount");
+	}
+	else
+	{
+	    WritePluginConsole("MYDEBUG -> ^bCheckPlayerCount()^n (L:1743) " + this.m_iCurrentPlayerCount + " Spieler");
+	    CheckPlayerCount();
+	}
         }
 
         public override void OnPlayerLeft(CPlayerInfo playerInfo) {
