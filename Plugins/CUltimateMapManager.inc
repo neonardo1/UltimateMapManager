@@ -2049,7 +2049,7 @@ namespace PRoConEvents {
                         }
                         else
                         {
-                            this.ExecuteCommand("procon.protected.send", "mapList.runNextRound");
+                            //this.ExecuteCommand("procon.protected.send", "mapList.runNextRound");
                         }
                     }
                     this.m_strVotedMapFileName = "";
