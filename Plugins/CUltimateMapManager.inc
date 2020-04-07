@@ -2040,7 +2040,7 @@ namespace PRoConEvents {
                     this.ExecuteCommand("procon.protected.send", "mapList.setNextMapIndex", nextMapIndex.ToString());
                     if (this.m_iCurrentPlayerCount == 0 && (!this.m_blRoundEnded || this.m_blRoundEnded && this.m_blRestartRequested) || this.m_enRestartNow == enumBoolYesNo.Yes && this.m_iCurrentPlayerCount <= this.m_iRestartLimit && !this.m_blRoundEnded)
                     {
-                        this.m_iCurrentRoundCount = -1;
+                        this.m_iCurrentRoundCount = 0;
                         if (this.m_enRestartWarning == enumBoolYesNo.Yes && this.m_iCurrentPlayerCount > 0)
                         {
                             if (this.m_strServerGameType == "bf3" || this.m_strServerGameType == "bf4" || this.m_strServerGameType == "bfhl") {
