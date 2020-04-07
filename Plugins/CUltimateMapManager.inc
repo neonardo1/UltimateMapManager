@@ -1734,7 +1734,7 @@ namespace PRoConEvents {
 	}
 	else
 	{
-	    WritePluginConsole("MYDEBUG -> ^bCheckPlayerCount()^n (L:1743) " + this.m_iCurrentPlayerCount + " Spieler");
+	    WritePluginConsole("CheckPlayerCount: " + this.m_iCurrentPlayerCount + " players", true);
 	    CheckPlayerCount();
 	}
         }
